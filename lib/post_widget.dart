@@ -101,18 +101,18 @@ class _PostWidgetState extends State<PostWidget> {
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              CarouselSlider(
-                items: widget.post.imageUrls.map((url) {
-                  return Image.asset(
-                    url,
-                    fit: BoxFit.fitWidth,
-                    width: MediaQuery.of(context).size.width,
-                  );
-                }).toList(),
-                viewportFraction: 1.0,
-                enableInfiniteScroll: false,
-                onPageChanged: _updateImageIndex, options: null,
-              ),
+              // CarouselSlider(
+              //   items: widget.post.imageUrls.map((url) {
+              //     return Image.asset(
+              //       url,
+              //       fit: BoxFit.fitWidth,
+              //       width: MediaQuery.of(context).size.width,
+              //     );
+              //   }).toList(),
+              //   viewportFraction: 1.0,
+              //   enableInfiniteScroll: false,
+              //   onPageChanged: _updateImageIndex,
+              // ),
               HeartOverlayAnimator(
                   triggerAnimationStream: _doubleTapImageEvents.stream),
             ],
